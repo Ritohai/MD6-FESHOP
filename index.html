@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/table.css">
+    <link rel="stylesheet" href="./css/top.css">
+    <!-- js -->
+    <script src="./js/vendor/jquery.min.js"></script>
+    <script src="./js/vendor/dataTables.bootstrap4.min.js"></script>
+    <script src="./js/vendor/jquery.dataTables.min.js"></script>
+
+    <script src="./js/top.js"></script>
+</head>
+<body>
+    <header>
+        <h1>
+            <img src="./imgs/aeta.logo_.png" alt="logo">
+        </h1>
+        <div class="user">
+            <p>abc@gmail.com</p>
+        </div>
+    </header>
+    <main>
+        <div class="box-left">
+            <div class="navbar">
+                    <div class="nav-list">
+                        <div class="nav-item tran">
+                            <a href="#" class="active">Quản lý chủ sở hữu</a>
+                            <div class="drop-down">
+                                <a href="#">Danh sách tìm kiếm</a>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#">Quản lý cửa hàng</a>
+                            <div class="drop-down">
+                                <a href="#">Danh sách tìm kiếm</a>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#">Quản lý thương hiệu</a>
+                            <div class="drop-down">
+                                <a href="#">Danh sách tìm kiếm</a>
+                                <a href="#">Đăng ký</a>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#">Quản lý đại lý</a>
+                            <div class="drop-down">
+                                <a href="#">Danh sách tìm kiếm</a>
+                                <a href="#">Đăng ký</a>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#">Quản lý tài khoản</a>
+                            <div class="drop-down">
+                                <a href="#">Danh sách tìm kiếm</a>
+                                <a href="#">Đăng ký</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="menu-btn">
+                <button class="btn-bar">
+                    <div class="box-line">
+                        <span class="line-1"></span>
+                        <span class="line-2"></span>
+                        <span class="line-3"></span>
+                    </div>
+                </button>
+            </div>
+            <div class="breadcrumb_wrap">
+				<ol id="breadcrumb">
+				  <li><a href="../">Quản lý chủ sở hữu</a><span>/</span></li>
+				  <li>Danh sách thông tin chủ sở hữu</li>
+				</ol>
+			</div>
+            <div class="form-dashboard">
+                <form action="">
+                    <div class="id-name form-control">
+                        <div class="id-user">
+                            <label for="">ID chủ sở hữu</label>
+                            <div class="input">
+                                <input type="text" placeholder="một hai ba">
+                                <span>~</span>
+                                <input type="text" placeholder="một hai ba">
+                            </div>
+                        </div>
+                        <div class="brand">
+                            <label for="">Hãng</label>
+                            <select>
+                                <option value=""></option>
+                                <option value="">Apple</option>
+                                <option value="">SamSung</option>
+                                <option value="">Sony</option>
+                            </select>
+                        </div>
+                        <div class="type">
+                            <input type="checkbox" name="type-canhan" value="canhan" id="type-canhan">
+                            <label for="type-canhan">Cá nhân</label>
+                            <input type="checkbox" name="type-tapdoan" value="tapdoan" id="type-tapdoan">
+                            <label for="type-tapdoan">Tập đoàn</label>
+                        </div>
+                    </div>
+                    <div class="company form-control">
+                        <div class="company-name">
+                            <label for="">ID chủ sở hữu</label>
+                            <input type="text" placeholder="Công ty TNHH abc">
+                        </div>
+                        <div class="user-name">
+                            <label for="">Tên người phụ trách</label>
+                            <div class="input">
+                                <input type="text" placeholder="một hai ba">
+                                <input type="text" placeholder="một hai ba">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="address form-control">
+                        <div class="post">
+                            <label for="">Mã bưu điện</label>
+                            <div class="input">
+                                <input type="text" placeholder="một hai ba">
+                                <span>-</span>
+                                <input type="text" placeholder="một hai ba">
+                            </div>
+                        </div>
+                        <div class="province">
+                            <label for="">Tỉnh</label>
+                            <select name="" id="">
+                                <option value="">TP.HCM</option>
+                                <option value="">Hà Nội</option>
+                            </select>
+                        </div>
+                        <div class="group-city">
+                            <label for="">Nhóm thành phố</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="contact form-control">
+                        <div class="machi-chome">
+                            <label for="">Machi-chome</label>
+                            <input type="text">
+                        </div>
+                        <div class="phone">
+                            <label for="">Số điện thoại</label>
+                            <div class="input-number">
+                                <input type="number" placeholder="1234">
+                                <span>-</span>
+                                <input type="number" placeholder="1234">
+                                <span>-</span>
+                                <input type="number" placeholder="1234">
+                            </div>
+                        </div>
+                        <div class="zone">
+                            <label for="">Phân vùng dữ liệu</label>
+                            <div class="input-zone">
+                                <div>
+                                    <input type="radio" id="register" name="zone" value="register" checked>
+                                    <label for="register">Đăng kí</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="any-case" name="zone" value="any-case">
+                                    <label for="any-case">Mọi trường hợp</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="cancel" name="zone" value="cancel">
+                                    <label for="cancel">Hủy bỏ</label> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="btn-group">
+                    <button>Đã xóa tình trạng</button>
+                    <button>Tìm kiếm</button>
+                </div>
+            </div>
+            <div class="table-content">
+                <div class="card-body">
+                    <div class="table-responsive">
+                       <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
+                          <thead>
+                             <tr>
+                                <th>ID chủ sở hữu</th>
+                                <th>Hãng</th>
+                                <th>Phân loại</th>
+                                <th>Tên doanh nghiệp <br> (tên thương mại)</th>
+                                <th>Tên người phụ trách</th>
+                                <th>Mã bưu điện</th>
+                             </tr>
+                          </thead>
+                          <tbody>
+                             <tr>
+                                <td >1</td>
+                                <td>111</td>
+                                <td>cá nhân</td>
+                                <td>kana</td>
+                                <td>kana</td>
+                                <td>1234</td>
+                             </tr>
+                             <tr>
+                                <td >2</td>
+                                <td>111</td>
+                                <td>cá nhân</td>
+                                <td>kana</td>
+                                <td>kana</td>
+                                <td>1234</td>
+                             </tr>
+                             <tr>
+                                <td >4</td>
+                                <td>111</td>
+                                <td>cá nhân</td>
+                                <td>kana</td>
+                                <td>kana</td>
+                                <td>1234</td>
+                             </tr>
+                             <tr>
+                                <td >6</td>
+                                <td>111</td>
+                                <td>cá nhân</td>
+                                <td>kana</td>
+                                <td>kana</td>
+                                <td>1234</td>
+                             </tr>
+                             <tr>
+                                <td >51</td>
+                                <td>111</td>
+                                <td>cá nhân</td>
+                                <td>kana</td>
+                                <td>kana</td>
+                                <td>1234</td>
+                             </tr>
+                             <tr>
+                                <td >16</td>
+                                <td>111</td>
+                                <td>cá nhân</td>
+                                <td>kana</td>
+                                <td>kana</td>
+                                <td>1234</td>
+                             </tr>
+                             <tr>
+                                <td >17</td>
+                                <td>111</td>
+                                <td>cá nhân</td>
+                                <td>kana</td>
+                                <td>kana</td>
+                                <td>121234</td>
+                             </tr>
+                             <tr>
+                                <td >21</td>
+                                <td>111</td>
+                                <td>cá nhân</td>
+                                <td>kana2</td>
+                                <td>kanaa</td>
+                                <td>12334</td>
+                             </tr>
+                             <tr>
+                                <td >17</td>
+                                <td>111</td>
+                                <td>cá nhân</td>
+                                <td>kaana</td>
+                                <td>kanda</td>
+                                <td>12134</td>
+                             </tr>
+                             <tr>
+                                <td >12</td>
+                                <td>1131</td>
+                                <td>cá nhân</td>
+                                <td>kana</td>
+                                <td>kana</td>
+                                <td>12z34</td>
+                             </tr>
+                             <tr>
+                                <td >16</td>
+                                <td>11132</td>
+                                <td>cá nhân</td>
+                                <td>kanas</td>
+                                <td>kanaa</td>
+                                <td>12b34</td>
+                             </tr>
+                             <tr>
+                                <td >123</td>
+                                <td>11351</td>
+                                <td>cá nhân</td>
+                                <td>kaána</td>
+                                <td>kafna</td>
+                                <td>1b234</td>
+                             </tr>
+                             <tr>
+                                <td >12</td>
+                                <td>11351</td>
+                                <td>cá nhân</td>
+                                <td>kanza</td>
+                                <td>kafna</td>
+                                <td>123b4</td>
+                             </tr>
+                             <tr>
+                                <td >21</td>
+                                <td>111</td>
+                                <td>cá nhân</td>
+                                <td>kana2</td>
+                                <td>kanaa</td>
+                                <td>12334</td>
+                             </tr>
+                             <tr>
+                                <td >17</td>
+                                <td>111</td>
+                                <td>cá nhân</td>
+                                <td>kaana</td>
+                                <td>kanda</td>
+                                <td>12134</td>
+                             </tr>
+                             <tr>
+                                <td >12</td>
+                                <td>1131</td>
+                                <td>cá nhân</td>
+                                <td>kana</td>
+                                <td>kana</td>
+                                <td>12z34</td>
+                             </tr>
+                             <tr>
+                                <td >16</td>
+                                <td>11132</td>
+                                <td>cá nhân</td>
+                                <td>kanas</td>
+                                <td>kanaa</td>
+                                <td>12b34</td>
+                             </tr>
+                             <tr>
+                                <td >123</td>
+                                <td>11351</td>
+                                <td>cá nhân</td>
+                                <td>kaána</td>
+                                <td>kafna</td>
+                                <td>1b234</td>
+                             </tr>
+                             <tr>
+                                <td >12</td>
+                                <td>11351</td>
+                                <td>cá nhân</td>
+                                <td>kanza</td>
+                                <td>kafna</td>
+                                <td>123b4</td>
+                             </tr>
+                          </tbody>
+                       </table>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&#169;Copyright by abc</p>
+    </footer>
+</body>
+</html>
